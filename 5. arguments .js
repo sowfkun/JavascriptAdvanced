@@ -30,17 +30,18 @@ function sum(a, b) { // function has 2 arguments
 function sum2() {
     console.log(arguments);
 
-    // sum use loop
-    let result = 0;
-    for (let i = 0; i < arguments.length; i++) {
-        result += arguments[i];
-    }
-    return result;
-    // // transform argument into array
-    // let numbers = Array.from(arguments);
-    // return numbers.reduce(function(sum, num) {
-    //     return sum + num;
-    // }, 0) // sum start with 0
+    // // sum use loop
+    // let result = 0;
+    // for (let i = 0; i < arguments.length; i++) {
+    //     result += arguments[i];
+    // }
+    // return result;
+    
+    // transform argument into array
+    let numbers = Array.from(arguments);
+    return numbers.reduce(function(sum, num) {
+        return sum + num;
+    }, 0) // sum start with 0
 }
 
 console.log(sum2(1, 2, 3, 4));
